@@ -58,5 +58,5 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('peran-dan-hak-akses', RoleController::class)->parameter('peran-dan-hak-akses', 'role');
 
-    Route::get('/verify/qrcode/{encrypted_id}', [VerificationController::class, 'show'])->name('verify.qrcode');
 });
+Route::get('/verify/qrcode/{encrypted_id}', [VerificationController::class, 'show'])->name('verify.qrcode');
